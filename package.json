@@ -1,0 +1,60 @@
+{
+  "name": "aplidex",
+  "version": "0.1.0",
+  "description": "technical test for the frontend position at apli, create a simple info page fetching data from pokeapi.co",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "standard": "echo '- Running standard -' && standard --fix && echo '- Standard OK -'",
+    "hook:precommit": "npm run standard"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run hook:precommit"
+    }
+  },
+  "standard": {
+    "globals": [
+      "fetch"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/rurickdev/aplidex.git"
+  },
+  "keywords": [
+    "pokedex",
+    "pokemon",
+    "pokeapi",
+    "nextjs",
+    "now",
+    "pwa",
+    "swp",
+    "bulma",
+    "sass",
+    "nodejs",
+    "react"
+  ],
+  "author": "Rurick M. Poisot aka RurickDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/rurickdev/aplidex/issues"
+  },
+  "homepage": "https://gitlab.com/rurickdev/aplidex#readme",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "classnames": "^2.2.6",
+    "dotenv": "^8.2.0",
+    "next": "^9.2.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "bulma": "^0.8.0",
+    "husky": "^4.0.10",
+    "standard": "^14.3.1"
+  }
+}
