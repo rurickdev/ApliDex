@@ -10,6 +10,16 @@
 // @import "constants.scss";
 @import "../node_modules/bulma/bulma.sass";
 
+.details-container {
+  position: fixed;
+  display: block;
+}
+
+.search-bar {
+  position: fixed;
+  top: 0;
+}
+
 // ToDo: Define components styles
 // @import "components/index.scss";
 // ToDo: Define pages styles
