@@ -11,5 +11,26 @@
 @import "../node_modules/bulma/bulma.sass";
 
 @import "components/index.scss";
+
+$smallScreen: 768px;
+
+.details-container {
+  position: fixed;
+  display: block;
+  @media (max-width: $smallScreen) {
+    bottom: 0;
+    width: 100vw;
+    height: 15vh;
+    background-color: white;
+  }
+}
+
+.search-bar {
+  position: fixed;
+  top: 0;
+}
+
+// ToDo: Define components styles
+// @import "components/index.scss";
 // ToDo: Define pages styles
 // @import "pages/index.scss";
