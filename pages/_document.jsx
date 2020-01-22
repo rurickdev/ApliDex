@@ -16,7 +16,7 @@ class MyDocument extends Document {
             href='https://s3.us-east-2.amazonaws.com/cdn.aplidex.now.sh/favicon.png'
           />
         </Head>
-        <body className='has-navbar-fixed-top'>
+        <body>
           <Main />
           <NextScript />
           <script src='https://kit.fontawesome.com/846cbbb684.js' />
