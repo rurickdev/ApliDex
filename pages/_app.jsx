@@ -17,12 +17,13 @@ class MyApp extends App {
           <title>ApliDex</title>
         </Head>
         <div className='columns is-multiline is-marginless is-paddingless'>
-          <aside className='column is-one-quarter'>
+          <aside className='column is-one-quarter is-hidden-mobile'>
             <div className='details-container'>
               <h1>Details</h1>
             </div>
           </aside>
-          <div className='has-background-white-ter column is-three-quarters'>
+
+          <div className='column is-three-quarters has-background-white-ter'>
             <div className='columns is-multiline is-mobile is-marginless is-paddingless'>
               <div className='column is-full'>
                 {/* ToDo: Crear el componente buscador */}
@@ -39,6 +40,9 @@ class MyApp extends App {
             </div>
           </div>
         </div>
+        <footer className='details-container'>
+          <h1>Details</h1>
+        </footer>
       </>
     )
   }

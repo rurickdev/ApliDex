@@ -10,9 +10,17 @@
 // @import "constants.scss";
 @import "../node_modules/bulma/bulma.sass";
 
+$smallScreen: 768px;
+
 .details-container {
   position: fixed;
   display: block;
+  @media (max-width: $smallScreen) {
+    bottom: 0;
+    width: 100vw;
+    height: 15vh;
+    background-color: white;
+  }
 }
 
 .search-bar {
