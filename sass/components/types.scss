@@ -5,8 +5,8 @@ $typeUrl: 'http://cdn.aplidex.rurick.dev.s3.us-east-2.amazonaws.com/assets/types
 .is-pokemon-type {
   margin: auto;
   text-align: left;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5em;
+  height: 1.5em;
   background-size: cover;
   &.is-normal-type {
     background-image: url("#{$typeUrl}/01.png");
