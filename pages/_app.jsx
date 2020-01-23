@@ -4,9 +4,6 @@ import Head from 'next/head'
 
 import '../sass/index.scss'
 
-// ToDo: Delete this
-const many = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-
 class MyApp extends App {
   render () {
     const { Component } = this.props
@@ -16,7 +13,7 @@ class MyApp extends App {
         <Head>
           <title>ApliDex</title>
         </Head>
-        <div className='columns is-multiline is-marginless is-paddingless'>
+        <main className='columns is-multiline is-marginless is-paddingless'>
           <aside className='column is-one-quarter is-hidden-mobile'>
             <div className='details-container'>
               <h1>Details</h1>
@@ -31,15 +28,10 @@ class MyApp extends App {
                   <h1>Buscador</h1>
                 </div>
               </div>
-              {/* ToDo: Cambiar esto por la petición a pokeapi */}
-              {many.map((element, index) => (
-                <div className='column is-half-mobile is-one-third-tablet is-one-third-desktop' key={index}>
-                  <Component />
-                </div>
-              ))}
+              <Component />
             </div>
           </div>
-        </div>
+        </main>
         <footer className='details-container'>
           <h1>Details</h1>
         </footer>
