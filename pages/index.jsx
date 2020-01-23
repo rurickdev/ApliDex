@@ -1,12 +1,17 @@
 
-// ToDo: Mod this file to show the SWP
+// Components
+import PokemonCard from '../components/pokemon-card'
+
 function Main () {
+  // ToDo: Save the api response here
+  const pokemonList = []
   return (
     <>
-      <h1>Initial Version of ApliDex</h1>
-      <span className='icon'>
-        <i className='fas fa-home' />
-      </span>
+      {pokemonList.map((pokemon, index) => (
+        <div className='column is-half-mobile is-one-third-tablet is-one-quarter-desktop' key={index}>
+          <PokemonCard pokemon={pokemon} />
+        </div>
+      ))}
     </>
   )
 }
