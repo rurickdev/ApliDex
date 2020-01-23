@@ -7,7 +7,6 @@ import '../sass/index.scss'
 
 function MyApp (props) {
   const { Component, pokemons } = props
-  console.log('[pageProps]', pokemons.length)
   return (
     <>
       <Head>
@@ -28,7 +27,6 @@ function MyApp (props) {
                 <h1>Buscador</h1>
               </div>
             </div>
-            {/* ToDo: Cambiar esto por la petición a pokeapi */}
             <Component pokemons={pokemons} />
           </div>
         </div>
