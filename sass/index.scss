@@ -5,29 +5,32 @@
 
 // Bulma
 // ToDo: Define colors
-// @import "colors.scss";
+// @import "./colors.scss";
 // ToDo: Define constants
-// @import "constants.scss";
+// @import "./constants.scss";
 @import "../node_modules/bulma/bulma.sass";
 
-@import "components/index.scss";
+@import "./components/index.scss";
+@import "./types.scss";
 
-$smallScreen: 768px;
-
+// ToDo: move this code to their respective component scss file
 .details-container {
   position: fixed;
   display: block;
-  @media (max-width: $smallScreen) {
+  // ToDo: check why its showing in desktop
+  @media (max-width: 768px) {
     bottom: 0;
     width: 100vw;
     height: 15vh;
     background-color: white;
+    z-index: 3;
   }
 }
 
 .search-bar {
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 
 // ToDo: Define components styles
