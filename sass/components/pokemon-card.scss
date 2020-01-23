@@ -1,0 +1,26 @@
+
+.is-pokemon-card {
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 0.25em;
+  padding-bottom: 0.75em;
+  &:hover {
+    box-shadow: 0px 15px 25px 0px rgba(202,202,202,1);
+    transform: translate3d(0px,-1px,0px);
+  }
+  .is-pokemon-image-container {
+    text-align: center;
+  }
+  .is-pokemon-data {
+    .is-pokemon-name {
+      width: 100%;
+      overflow-y: auto;
+      white-space: nowrap;
+      text-transform: capitalize;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
