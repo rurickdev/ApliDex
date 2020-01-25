@@ -8,6 +8,7 @@ function Main (props) {
     <>
       {pokemons.map((pokemon, index) => (
         <div className='column is-half-mobile is-one-third-tablet is-one-quarter-desktop' key={index}>
+          {/* {pokemon.name} */}
           <PokemonCard pokemon={pokemon} />
         </div>
       ))}
