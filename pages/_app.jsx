@@ -1,12 +1,14 @@
 
 import Head from 'next/head'
 
-import pokedex from '../lib/api'
+import CharacterDetails from '../components/character-details'
+
+import api from '../lib/api'
 
 import '../sass/index.scss'
 
 function MyApp (props) {
-  const { Component, pokemons } = props
+  const { Component, pokemonList } = props
   return (
     <>
       <Head>
@@ -14,9 +16,8 @@ function MyApp (props) {
       </Head>
       <div className='columns is-multiline is-marginless is-paddingless'>
         <aside className='column is-one-quarter is-hidden-mobile'>
-          <div className='details-container'>
-            <h1>Details</h1>
-          </div>
+          {/* ToDo: pass the default character data */}
+          <CharacterDetails />
         </aside>
 
         <div className='column is-three-quarters has-background-white-ter'>
@@ -27,7 +28,7 @@ function MyApp (props) {
                 <h1>Buscador</h1>
               </div>
             </div>
-            <Component pokemons={pokemons} />
+            <Component pokemons={pokemonList} />
           </div>
         </div>
       </div>
@@ -39,13 +40,8 @@ function MyApp (props) {
 }
 
 MyApp.getInitialProps = async () => {
-  const { results } = await pokedex.getPokemonsList()
-
-  const pokemonListWithDetailsPromises = results.map(pokemon => pokedex.getPokemonByName(pokemon.name))
-
-  const pokemonListWithDetails = await Promise.all(pokemonListWithDetailsPromises)
-
-  return { pokemons: pokemonListWithDetails }
+  const { results } = await api.pokeapi.getPokemonsList()
+  return { pokemonList: results }
 }
 
 export default MyApp

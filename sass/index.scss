@@ -12,20 +12,14 @@
 
 @import "./components/index.scss";
 
-// ToDo: move this code to their respective component scss file
-.details-container {
-  position: fixed;
-  display: block;
-  // ToDo: check why its showing in desktop
-  @media (max-width: 768px) {
-    bottom: 0;
-    width: 100vw;
-    height: 15vh;
-    background-color: white;
-    z-index: 3;
+.has-not-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
+// ToDo: move this code to their respective component scss file
 .search-bar {
   position: fixed;
   top: 0;
