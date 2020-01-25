@@ -1,7 +1,7 @@
 
 import Head from 'next/head'
 
-import CharacterDetails from '../components/character-details'
+import PokemonDetails from '../components/pokemon-details'
 
 import api from '../lib/api'
 
@@ -17,7 +17,7 @@ function MyApp (props) {
       <div className='columns is-multiline is-marginless is-paddingless'>
         <aside className='column is-one-quarter is-hidden-mobile'>
           {/* ToDo: pass the default character data */}
-          <CharacterDetails />
+          <PokemonDetails />
         </aside>
 
         <div className='column is-three-quarters has-background-white-ter'>
@@ -40,8 +40,12 @@ function MyApp (props) {
 }
 
 MyApp.getInitialProps = async () => {
+  const rurick = await api.rurick.getInfo()
   const { results } = await api.pokeapi.getPokemonsList()
-  return { pokemonList: results }
+  return {
+    rurick,
+    pokemonList: results
+  }
 }
 
 export default MyApp
