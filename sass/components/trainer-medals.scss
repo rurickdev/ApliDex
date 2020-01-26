@@ -1,0 +1,32 @@
+
+.is-trainer-medal {
+  margin: 0.5rem;
+  text-align: left;
+  width: 2em;
+  height: 2em;
+  background-size: cover;
+  &.is-backend {
+    background-image: url('#{$medalsUrl}/backend.png');
+  }
+  &.is-frontend {
+    background-image: url('#{$medalsUrl}/frontend.png');
+  }
+  &.is-databases {
+    background-image: url('#{$medalsUrl}/databases.png');
+  }
+  &.is-cloud {
+    background-image: url('#{$medalsUrl}/cloud.png');
+  }
+  &.is-git {
+    background-image: url('#{$medalsUrl}/git.png');
+  }
+  &.is-css-frameworks {
+    background-image: url('#{$medalsUrl}/css-frameworks.png');
+  }
+  &.is-vanilla-web {
+    background-image: url('#{$medalsUrl}/vanilla-web.png');
+  }
+  &.is-mobile {
+    background-image: url('#{$medalsUrl}/mobile.png');
+  }
+}

@@ -26,7 +26,7 @@ function PokemonDetails (props) {
   const nameCamelCase = utils.firstLetterToUpperCase(name)
 
   return (
-    <div className='is-pokemon-details has-not-scrollbar columns is-multiline is-centered'>
+    <div className='is-pokemon-details columns is-multiline is-centered'>
       <div className='column is-11 is-size-3 has-text-centered'>
         <h1>{nameCamelCase}</h1>
       </div>
@@ -80,7 +80,7 @@ function PokemonDetails (props) {
         <h5>Sprites</h5>
         <div className='is-sprites-container columns is-multiline'>
           {filteredSprites.map((sprite, index) => (
-            <figure className='column is-one-fourth is-paddingless' key={index}>
+            <figure className='column is-one-quarter' key={index}>
               <img src={sprite} alt='' />
             </figure>
           ))}
