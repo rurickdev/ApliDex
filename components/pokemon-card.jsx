@@ -16,7 +16,7 @@ function PokemonCard (props) {
     id: 1
   })
 
-  const { pokemon } = props
+  const { pokemon, onClick } = props
 
   async function getPokemon (name) {
     return api.pokeapi.getPokemonByName(name)
@@ -37,14 +37,17 @@ function PokemonCard (props) {
   }, [])
 
   return (
-    <div className='is-pokemon-card card'>
+    <div
+      className='is-pokemon-card card'
+      onClick={() => { onClick(pokemonData) }}
+    >
       <figure className='is-pokemon-image-container card-image'>
         <img className='is-pokemon-image' src={pokemonData.sprites.front_default || ghostImage} alt={pokemonData.name} />
       </figure>
 
       <div className='is-pokemon-data card-content columns is-mobile is-multiline is-marginless is-paddingless is-vcentered'>
 
-        <span className='is-pokemon-name has-not-scrollbar column is-full is-size-3 is-size-4-mobile'>
+        <span className='is-pokemon-name has-bit-font has-not-scrollbar column is-full is-size-5 is-size-6-mobile'>
           {utils.cleanName(pokemonData.name)}
         </span>
 

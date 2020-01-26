@@ -15,11 +15,11 @@ class MyDocument extends Document {
             type='image/png'
             href='http://cdn.aplidex.rurick.dev.s3.us-east-2.amazonaws.com/favicon.png'
           />
+          <link rel='stylesheet' href='//cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css' />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script src='https://kit.fontawesome.com/846cbbb684.js' />
         </body>
       </Html>
     )

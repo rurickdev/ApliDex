@@ -6,6 +6,7 @@
   padding: 0.25em;
   padding-bottom: 0.75em;
   &:hover {
+    cursor: pointer;
     box-shadow: 0px 15px 25px 0px rgba(202,202,202,1);
     transform: translate3d(0px,-1px,0px);
   }
