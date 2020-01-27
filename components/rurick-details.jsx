@@ -16,7 +16,7 @@ function RurickDetails (props) {
       <div className='column is-11 is-size-3 has-text-centered'>
         {
           isTrainer
-            ? <h1 className='has-bit-font'>Entrenador {data.firstName} </h1>
+            ? <h1 className='has-bit-font is-size-5-mobile'>Entrenador {data.firstName} </h1>
             : <h1>{`${data.firstName} ${data.paternalLastName} ${data.maternalLastName}`}</h1>
         }
       </div>
@@ -26,7 +26,7 @@ function RurickDetails (props) {
         <img
           className='image overlay'
           src={isTrainer ? data.asPokemonTrainer.avatar : data.picture}
-          alt={data.name}
+          alt={data.firstName}
           title='Click Me'
         />
       </figure>

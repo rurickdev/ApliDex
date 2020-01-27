@@ -30,7 +30,7 @@ function PokemonBottomSheet (props) {
                 onClick={() => { toggleOpen() }}
               />
             </div>
-            <div className='column is-pokemon-details-mobile'>
+            <div className='column is-pokemon-details-bottom-sheet'>
               <PokemonDetails pokemon={pokemon} />
             </div>
           </>
@@ -43,9 +43,9 @@ function PokemonBottomSheet (props) {
             <div className='column is-one-third'>
               <img src={sprites.front_default} alt={name} className='is-pokemon-image' />
             </div>
-            <div className='is-pokemon-data-mobile column is-two-thirds'>
+            <div className='is-pokemon-data-bottom-sheet column is-two-thirds'>
               <div className='columns is-multiline is-mobile is-vcentered'>
-                <span className='is-pokemon-name-mobile has-bit-font column is-full has-not-scrollbar'>
+                <span className='is-pokemon-name-bottom-sheet has-bit-font column is-full has-not-scrollbar'>
                   {name}
                 </span>
                 <span className='column is-half is-marginless'>
