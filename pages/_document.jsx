@@ -13,7 +13,7 @@ class MyDocument extends Document {
           <link
             rel='icon'
             type='image/png'
-            href='http://cdn.aplidex.rurick.dev.s3.us-east-2.amazonaws.com/favicon.png'
+            href='https://s3.us-east-2.amazonaws.com/cdn.aplidex.rurick.dev/favicon.png'
           />
           <link rel='stylesheet' href='//cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css' />
         </Head>
