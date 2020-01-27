@@ -2,11 +2,12 @@
   padding-right: 1.25rem;
   text-align: center;
   .is-rurick-image {
-    height: 256px;
-    width: 256px;
-    left: calc(50% - (256px / 2));
+    height: 35vh;
+    width: 35vh;
+    left: calc(50% - (35vh / 2));
     &:hover {
       cursor: pointer;
+      filter: blur(0.2rem);
     }
   }
   .is-rurick-about {

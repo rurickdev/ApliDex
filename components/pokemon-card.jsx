@@ -6,6 +6,8 @@ import TypeIcon from '../components/type-icon'
 import api from '../lib/api'
 import utils from '../lib/utils/utils'
 
+import urls from '../constants/urls'
+
 function PokemonCard (props) {
   const [pokemonData, setPokemon] = useState({
     name: 'Finish Loading',
@@ -40,7 +42,7 @@ function PokemonCard (props) {
       onClick={() => { onClick(pokemonData) }}
     >
       <figure className='is-pokemon-image-container card-image'>
-        <img className='is-pokemon-image' src={pokemonData.sprites.front_default} alt={pokemonData.name} />
+        <img className='is-pokemon-image' src={pokemonData.sprites.front_default || urls.ghostImage} alt={pokemonData.name} />
       </figure>
 
       <div className='is-pokemon-data card-content columns is-mobile is-multiline is-marginless is-paddingless is-vcentered'>
