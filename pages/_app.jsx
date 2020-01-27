@@ -5,6 +5,7 @@ import Head from 'next/head'
 import PokemonDetails from '../components/pokemon-details'
 import PokemonBottomSheet from '../components/pokemon-bottom-sheet'
 import RurickDetails from '../components/rurick-details'
+import RurickBottomSheet from '../components/rurick-bottom-sheet'
 
 import api from '../lib/api'
 
@@ -48,11 +49,10 @@ function MyApp (props) {
           </div>
         </div>
       </div>
-      <section className='is-details-container-mobile is-hidden-tablet'>
+      <section className='is-details-container-bottom-sheet is-hidden-tablet'>
         {pokemonSelected
           ? <PokemonBottomSheet pokemon={pokemonSelected} />
-          : <h1>Detalles</h1>}
-        {/* : <RurickDetails data={rurick} />} */}
+          : <RurickBottomSheet data={rurick} />}
       </section>
     </>
   )
