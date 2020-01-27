@@ -6,14 +6,12 @@ import TypeIcon from '../components/type-icon'
 import api from '../lib/api'
 import utils from '../lib/utils/utils'
 
-const ghostImage = 'http://cdn.aplidex.rurick.dev.s3.us-east-2.amazonaws.com/assets/ghost.png'
-
 function PokemonCard (props) {
   const [pokemonData, setPokemon] = useState({
-    sprites: {},
-    name: '',
+    name: 'Finish Loading',
+    id: 0,
     types: [],
-    id: 1
+    sprites: { front_default: '' }
   })
 
   const { pokemon, onClick } = props
@@ -42,7 +40,7 @@ function PokemonCard (props) {
       onClick={() => { onClick(pokemonData) }}
     >
       <figure className='is-pokemon-image-container card-image'>
-        <img className='is-pokemon-image' src={pokemonData.sprites.front_default || ghostImage} alt={pokemonData.name} />
+        <img className='is-pokemon-image' src={pokemonData.sprites.front_default} alt={pokemonData.name} />
       </figure>
 
       <div className='is-pokemon-data card-content columns is-mobile is-multiline is-marginless is-paddingless is-vcentered'>
