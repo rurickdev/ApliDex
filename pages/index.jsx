@@ -1,23 +1,15 @@
 
-// Components
-import PokemonCard from '../components/pokemon-card'
+import PokemonCardGrid from '../components/pokemon-cards-grid'
 
-function Main (props) {
+function Index (props) {
   const { pokemons, onClick } = props
+
   return (
-    <>
-      {pokemons.map((pokemon, index) => (
-        <div className='column is-half-mobile is-one-third-tablet is-one-quarter-desktop is-one-fifth-widescreen' key={index}>
-          {/* ToDo: Remove this */}
-          {/* {pokemon.name} */}
-          <PokemonCard
-            pokemon={pokemon}
-            onClick={onClick}
-          />
-        </div>
-      ))}
-    </>
+    <PokemonCardGrid
+      pokemonList={pokemons}
+      onClick={onClick}
+    />
   )
 }
 
-export default Main
+export default Index
