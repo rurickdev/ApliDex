@@ -1,14 +1,15 @@
 
-// ToDo: Mod this file to show the SWP
-function Main () {
+import PokemonCardGrid from '../components/pokemon-cards-grid'
+
+function Index (props) {
+  const { pokemons, onClick } = props
+
   return (
-    <>
-      <h1>Initial Version of ApliDex</h1>
-      <span className='icon'>
-        <i className='fas fa-home' />
-      </span>
-    </>
+    <PokemonCardGrid
+      pokemonList={pokemons}
+      onClick={onClick}
+    />
   )
 }
 
-export default Main
+export default Index

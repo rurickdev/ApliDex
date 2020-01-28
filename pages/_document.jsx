@@ -13,13 +13,13 @@ class MyDocument extends Document {
           <link
             rel='icon'
             type='image/png'
-            href='https://s3.us-east-2.amazonaws.com/cdn.aplidex.now.sh/favicon.png'
+            href='https://s3.us-east-2.amazonaws.com/cdn.aplidex.rurick.dev/favicon.png'
           />
+          <link rel='stylesheet' href='//cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css' />
         </Head>
-        <body className='has-navbar-fixed-top'>
+        <body>
           <Main />
           <NextScript />
-          <script src='https://kit.fontawesome.com/846cbbb684.js' />
         </body>
       </Html>
     )

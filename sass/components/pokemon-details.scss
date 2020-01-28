@@ -1,0 +1,9 @@
+
+.is-pokemon-details {
+  .is-pokemon-name {
+    text-transform: capitalize;
+  }
+  .is-pokemon-image {
+    left: calc(50% - (128px / 2));
+  }
+}

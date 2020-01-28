@@ -45,12 +45,18 @@
   "homepage": "https://gitlab.com/rurickdev/aplidex#readme",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.2.0",
     "node-sass": "^4.13.1",
+    "placeholder-loading": "^0.2.5",
+    "pokedex-promise-v2": "^3.2.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-chartjs-2": "^2.8.0",
+    "react-dom": "^16.12.0",
+    "react-lazyload": "^2.6.5"
   },
   "devDependencies": {
     "bulma": "^0.8.0",
