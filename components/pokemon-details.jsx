@@ -37,7 +37,7 @@ function PokemonDetails (props) {
       <figure className='column is-11'>
         <img
           className='is-pokemon-image image is-128x128 has-text-centered'
-          src={sprites.front_default || urls.ghostImage}
+          src={sprites.front_default || urls.noSprite}
           alt={name}
         />
       </figure>

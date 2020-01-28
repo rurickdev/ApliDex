@@ -1,7 +1,8 @@
 
 import { useState, useEffect } from 'react'
 
-import TypeIcon from '../components/type-icon'
+import TypeIcon from './type-icon'
+import PokemonCardPlaceholder from './pokemon-card-placeholder'
 
 import api from '../lib/api'
 import utils from '../lib/utils/utils'
@@ -9,12 +10,12 @@ import utils from '../lib/utils/utils'
 import urls from '../constants/urls'
 
 function PokemonCard (props) {
-  const [pokemonData, setPokemon] = useState({
-    name: 'Finish Loading',
-    id: 0,
-    types: [],
-    sprites: { front_default: '' }
-  })
+  const [pokemonName, setPokemonName] = useState('')
+  const [pokemonId, setPokemonId] = useState(0)
+  const [pokemonTypes, setPokemonTypes] = useState([])
+  const [pokemonSprites, setPokemonSprites] = useState({})
+  const [getPokemonError, setPokemonError] = useState(false)
+  const [pokemonRawData, setPokemonRawData] = useState({})
 
   const { pokemon, onClick } = props
 
@@ -24,42 +25,53 @@ function PokemonCard (props) {
 
   useEffect(() => {
     getPokemon(pokemon.name)
-      .then(setPokemon)
+      .then((pokemonData) => {
+        setPokemonName(pokemonData.name)
+        setPokemonId(pokemonData.id)
+        setPokemonTypes(pokemonData.types)
+        setPokemonSprites(pokemonData.sprites)
+        setPokemonRawData(pokemonData)
+      })
       .catch(error => {
-        setPokemon({
-          name: error,
-          id: 0,
-          types: [],
-          sprites: { front_default: '' }
-        })
+        setPokemonError(true)
         console.error(error)
       })
   }, [])
 
+  const hasData = pokemonName && pokemonId && pokemonSprites && pokemonTypes && !getPokemonError
+
   return (
-    <div
-      className='is-pokemon-card card'
-      onClick={() => { onClick(pokemonData) }}
-    >
-      <figure className='is-pokemon-image-container card-image'>
-        <img className='is-pokemon-image' src={pokemonData.sprites.front_default || urls.ghostImage} alt={pokemonData.name} />
-      </figure>
+    <>
+      {
+        hasData
+          ? (
+            <div
+              className='is-pokemon-card card'
+              onClick={() => { onClick(pokemonRawData) }}
+            >
+              <figure className='is-pokemon-image-container card-image'>
+                <img className='is-pokemon-image' src={pokemonSprites.front_default || urls.noSprite} alt={pokemonName} />
+              </figure>
 
-      <div className='is-pokemon-data card-content columns is-mobile is-multiline is-marginless is-paddingless is-vcentered'>
+              <div className='is-pokemon-data card-content columns is-mobile is-multiline is-marginless is-paddingless is-vcentered'>
 
-        <span className='is-pokemon-name has-bit-font has-not-scrollbar column is-full is-size-5 is-size-6-mobile'>
-          {utils.cleanName(pokemonData.name)}
-        </span>
+                <span className='is-pokemon-name has-bit-font has-not-scrollbar column is-full is-size-6 is-size-7-mobile'>
+                  {utils.cleanName(pokemonName)}
+                </span>
 
-        <span className='is-pokemon-number column'>#{pokemonData.id}</span>
+                <span className='is-pokemon-number column'>#{pokemonId}</span>
 
-        {pokemonData.types.map((type, index) => (
-          <div className='column is-one-quarter is-paddingless' key={index}>
-            <TypeIcon type={type.type.name} />
-          </div>
-        ))}
-      </div>
-    </div>
+                {pokemonTypes.map((type, index) => (
+                  <div className='column is-one-quarter is-paddingless' key={index}>
+                    <TypeIcon type={type.type.name} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )
+          : <PokemonCardPlaceholder />
+      }
+    </>
   )
 }
 

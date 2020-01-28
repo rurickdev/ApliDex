@@ -13,9 +13,9 @@
   }
   .is-pokemon-image-container {
     text-align: center;
-    max-height: 20vh;
+    min-height: 12vh;
     .is-pokemon-image {
-      max-height: 15vh;
+      min-height: 12vh;
     }
   }
   .is-pokemon-data {
