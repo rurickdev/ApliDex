@@ -18,7 +18,7 @@ function PokemonCardsGrid (props) {
         <div key={index} className='column is-half-mobile is-one-third-tablet is-one-quarter-desktop is-one-fifth-widescreen'>
           <LazyLoad
             once
-            offset={150}
+            throttle
             placeholder={<PokemonCardPlaceholder />}
           >
             <PokemonCard
