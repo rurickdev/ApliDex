@@ -88,10 +88,10 @@ function PokemonDetails (props) {
 
       {/* Sprites */}
       <div className='column is-11 is-size-4'>
-        <h5>Sprites</h5>
+        <h5 className='is-sprites-title'>Sprites</h5>
         <div className='is-sprites-container columns is-multiline is-mobile'>
           {filteredSprites.map((sprite, index) => (
-            <figure className='column is-one-quarter' key={index}>
+            <figure className='column is-one-quarter is-paddingless' key={index}>
               <img src={sprite} alt='' />
             </figure>
           ))}
