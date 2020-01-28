@@ -1,0 +1,68 @@
+
+.is-pokemon-type {
+  margin: auto;
+  text-align: left;
+  width: 1.5em;
+  height: 1.5em;
+  background-size: cover;
+  &.is-normal-type {
+    background-image: url("#{$typeUrl}/01.png");
+  }
+  &.is-fighting-type {
+    background-image: url("#{$typeUrl}/02.png");
+  }
+  &.is-flying-type {
+    background-image: url("#{$typeUrl}/03.png");
+  }
+  &.is-poison-type {
+    background-image: url("#{$typeUrl}/04.png");
+  }
+  &.is-ground-type {
+    background-image: url("#{$typeUrl}/05.png");
+  }
+  &.is-rock-type {
+    background-image: url("#{$typeUrl}/06.png");
+  }
+  &.is-bug-type {
+    background-image: url("#{$typeUrl}/07.png");
+  }
+  &.is-ghost-type {
+    background-image: url("#{$typeUrl}/08.png");
+  }
+  &.is-steel-type {
+    background-image: url("#{$typeUrl}/09.png");
+  }
+  &.is-fire-type {
+    background-image: url("#{$typeUrl}/10.png");
+  }
+  &.is-water-type {
+    background-image: url("#{$typeUrl}/11.png");
+  }
+  &.is-grass-type {
+    background-image: url("#{$typeUrl}/12.png");
+  }
+  &.is-electric-type {
+    background-image: url("#{$typeUrl}/13.png");
+  }
+  &.is-psychic-type {
+    background-image: url("#{$typeUrl}/14.png");
+  }
+  &.is-ice-type {
+    background-image: url("#{$typeUrl}/15.png");
+  }
+  &.is-dragon-type {
+    background-image: url("#{$typeUrl}/16.png");
+  }
+  &.is-dark-type {
+    background-image: url("#{$typeUrl}/17.png");
+  }
+  &.is-fairy-type {
+    background-image: url("#{$typeUrl}/18.png");
+  }
+  &.is-unknown-type {
+    background-image: url("#{$typeUrl}/19.png");
+  }
+  &.is-shadow-type {
+    background-image: url("#{$typeUrl}/20.png");
+  }
+}
