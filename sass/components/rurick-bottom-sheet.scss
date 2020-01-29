@@ -26,11 +26,18 @@
     z-index: 3;
     overflow-y: scroll;
     pointer-events: all;
-    .is-rurick-image {
-      width: 50vw;
-      height: 50vw;
-      img {
-      left: 25vw
+    .is-rurick-details {
+      margin: 0;
+      max-width: 100%;
+      .is-rurick-image { // figure
+        max-width: 75%;
+        max-height: 75%;
+        display: block;
+        position: relative;
+        left: calc(50% - (75% / 2));
+        .image {
+          width: 100%;
+        }
       }
     }
   }
