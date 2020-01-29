@@ -32,17 +32,29 @@ function RurickBottomSheet (props) {
             className='columns is-multiline is-mobile'
             onClick={() => { toggleOpen() }}
           >
-            <div className='column is-one-third is-paddingless'>
-              <img src={data.picture} alt={data.firstName} className='is-rurick-image' />
-            </div>
+            <figure className='column is-one-third is-paddingless'>
+              <img
+                src={data.picture}
+                alt={data.firstName}
+                className='is-rurick-image'
+              />
+            </figure>
             <div className='is-rurick-data-mobile column is-two-thirds'>
               <div className='columns is-multiline is-mobile is-vcentered'>
                 <span className='is-rurick-name-mobile is-size-4 column is-full has-not-scrollbar'>
                   {`${data.firstName} ${data.paternalLastName}`}
                 </span>
                 {data.onlineProfiles.map((profile, index) => (
-                  <div className='column is-2-mobile has-text-left' key={index}>
-                    <a className={`mdi mdi-${profile.icon} is-size-4`} title={profile.name} href={profile.link} target='_blank' rel='noopener noreferrer' />
+                  <div
+                    className='column is-2-mobile has-text-left'
+                    key={index}
+                  >
+                    <a
+                      className={`mdi mdi-${profile.icon} is-size-4`}
+                      title={profile.name} href={profile.link}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    />
                   </div>
                 ))}
               </div>

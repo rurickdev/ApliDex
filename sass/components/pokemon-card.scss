@@ -14,6 +14,11 @@
   .is-pokemon-image-container {
     text-align: center;
     min-height: 12vh;
+    .is-no-sprite-image {
+      padding-top: 15px;
+      max-width: 35%;
+      max-height: auto;
+    }
   }
   .is-pokemon-data {
     .is-pokemon-name {

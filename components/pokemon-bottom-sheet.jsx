@@ -41,7 +41,11 @@ function PokemonBottomSheet (props) {
             onClick={() => { toggleOpen() }}
           >
             <div className='column is-one-third'>
-              <img src={sprites.front_default} alt={name} className='is-pokemon-image' />
+              <img
+                src={sprites.front_default}
+                alt={name}
+                className='is-pokemon-image'
+              />
             </div>
             <div className='is-pokemon-data-bottom-sheet column is-two-thirds'>
               <div className='columns is-multiline is-mobile is-vcentered'>
@@ -52,7 +56,10 @@ function PokemonBottomSheet (props) {
                   #{id}
                 </span>
                 {types.map((type, index) => (
-                  <div className='column is-one-quarter' key={index}>
+                  <div
+                    className='column is-one-quarter'
+                    key={index}
+                  >
                     <TypeIcon type={type.type.name} />
                   </div>
                 ))}

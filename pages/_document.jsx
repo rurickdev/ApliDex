@@ -17,7 +17,7 @@ class MyDocument extends Document {
           />
           <link rel='stylesheet' href='//cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css' />
         </Head>
-        <body>
+        <body className='has-not-scrollbar'>
           <Main />
           <NextScript />
         </body>
