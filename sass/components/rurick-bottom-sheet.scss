@@ -26,5 +26,17 @@
     z-index: 3;
     overflow-y: scroll;
     pointer-events: all;
+    .is-rurick-image {
+      width: 50vw;
+      height: 50vw;
+      img {
+      left: 25vw
+      }
+    }
+  }
+  .is-rurick-image {
+    border-radius: 12px 0 0 0;
+    max-height: 115px;
+    max-width: 115px;
   }
 }

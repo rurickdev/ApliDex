@@ -9,9 +9,12 @@
       cursor: pointer;
     }
   }
-  .is-rurick-about {
-    text-align: justify;
-    text-justify: inter-character;
+  .is-rurick-about-container {
+    margin: 12px;
+    .is-rurick-about {
+      text-align: justify;
+      text-justify: inter-character;
+    }
   }
   .is-battle-background {    
     border-style: double;

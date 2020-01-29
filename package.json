@@ -56,7 +56,8 @@
     "react": "^16.12.0",
     "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.12.0",
-    "react-lazyload": "^2.6.5"
+    "react-virtualized-auto-sizer": "^1.0.2",
+    "react-window": "^1.8.5"
   },
   "devDependencies": {
     "bulma": "^0.8.0",
