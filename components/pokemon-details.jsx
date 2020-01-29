@@ -46,7 +46,10 @@ function PokemonDetails (props) {
       <div className='column is-11 is-size-3'>
         <div className='columns is-multiline is-mobile is-centered'>
           {types.map((type, index) => (
-            <div className='column is-one-quarter is-paddingless' key={index}>
+            <div
+              className='column is-one-quarter is-paddingless'
+              key={index}
+            >
               <TypeIcon type={type.type.name} />
             </div>
           ))}
@@ -55,7 +58,10 @@ function PokemonDetails (props) {
 
       {/* Stats Chart */}
       <div className='column is-11 is-size-4'>
-        <StatsChart stats={stats} pokemonName={nameCamelCase} />
+        <StatsChart
+          stats={stats}
+          pokemonName={nameCamelCase}
+        />
       </div>
 
       {/* Abilities and Movements */}
@@ -64,7 +70,10 @@ function PokemonDetails (props) {
           <div className='column is half'>
             <h5>Abilities</h5>
             {abilities.map((ability, index) => (
-              <h6 className='is-size-6 is-size-7-mobile' key={index}>
+              <h6
+                className='is-size-6 is-size-7-mobile'
+                key={index}
+              >
                 {utils.removeHyphens(ability.ability.name)}
               </h6>
             ))}
@@ -76,7 +85,10 @@ function PokemonDetails (props) {
               return [
                 ...moves,
                 (
-                  <h6 className='is-size-6 is-size-7-mobile' key={index}>
+                  <h6
+                    className='is-size-6 is-size-7-mobile'
+                    key={index}
+                  >
                     {utils.removeHyphens(move.move.name)}
                   </h6>
                 )
@@ -90,11 +102,20 @@ function PokemonDetails (props) {
       <div className='column is-11 is-size-4'>
         <h5 className='is-sprites-title'>Sprites</h5>
         <div className='is-sprites-container columns is-multiline is-mobile'>
-          {filteredSprites.map((sprite, index) => (
-            <figure className='column is-one-quarter is-paddingless' key={index}>
-              <img src={sprite} alt='' />
-            </figure>
-          ))}
+          {filteredSprites.map((sprite, index, sprites) => {
+            let columnSize = 'is-one-quarter'
+            if (sprites.length === 1) columnSize = 'is-full'
+            if (sprites.length === 2) columnSize = 'is-half'
+
+            return (
+              <figure
+                className={`column ${columnSize} is-paddingless`}
+                key={index}
+              >
+                <img src={sprite} alt='' />
+              </figure>
+            )
+          })}
         </div>
       </div>
     </div>

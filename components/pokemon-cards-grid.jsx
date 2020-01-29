@@ -12,16 +12,21 @@ function PokemonCardsGrid (props) {
   let pokemonRows = []
 
   function Cell ({ columnIndex, rowIndex, style }) {
+    const pokemon = pokemonRows[rowIndex][columnIndex]
     return (
-      <div
-        className='column is-half-mobile is-one-third-tablet is-one-quarter-desktop is-one-fifth-widescreen'
-        style={style}
-      >
-        <PokemonCard
-          pokemon={pokemonRows[rowIndex][columnIndex]}
-          onClick={onClick}
-        />
-      </div>
+      <>
+        {pokemon && (
+          <div
+            className='column is-half-mobile is-one-third-tablet is-one-quarter-desktop is-one-fifth-widescreen'
+            style={style}
+          >
+            <PokemonCard
+              pokemon={pokemon}
+              onClick={onClick}
+            />
+          </div>
+        )}
+      </>
     )
   }
 

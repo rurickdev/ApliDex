@@ -50,7 +50,23 @@ function PokemonCard (props) {
               onClick={() => { onClick(pokemonRawData) }}
             >
               <figure className='is-pokemon-image-container card-image'>
-                <img className='is-pokemon-image' src={pokemonSprites.front_default || urls.noSprite} alt={pokemonName} />
+                {
+                  pokemonSprites.front_default
+                    ? (
+                      <img
+                        className='is-pokemon-image'
+                        src={pokemonSprites.front_default}
+                        alt={pokemonName}
+                      />
+                    )
+                    : (
+                      <img
+                        className='is-no-sprite-image'
+                        src={urls.noSprite}
+                        alt={pokemonName}
+                      />
+                    )
+                }
               </figure>
 
               <div className='is-pokemon-data card-content columns is-mobile is-multiline is-marginless is-paddingless is-vcentered'>
@@ -59,10 +75,15 @@ function PokemonCard (props) {
                   {utils.cleanName(pokemonName)}
                 </span>
 
-                <span className='is-pokemon-number column'>#{pokemonId}</span>
+                <span className='is-pokemon-number column'>
+                  #{pokemonId}
+                </span>
 
                 {pokemonTypes.map((type, index) => (
-                  <div className='column is-one-quarter is-paddingless' key={index}>
+                  <div
+                    className='column is-one-quarter is-paddingless'
+                    key={index}
+                  >
                     <TypeIcon type={type.type.name} />
                   </div>
                 ))}
