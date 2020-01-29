@@ -35,7 +35,7 @@ function PokemonCardsGrid (props) {
         columnWidth={width / (columnCount * 1.02)}
         width={width}
         rowCount={pokemonRows.length}
-        rowHeight={230}
+        rowHeight={height < 1000 ? 230 : (height / 3.6)}
         height={height}
       >
         {Cell}
