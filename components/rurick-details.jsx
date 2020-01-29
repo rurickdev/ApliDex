@@ -11,7 +11,7 @@ function RurickDetails (props) {
   }
 
   return (
-    <div className='is-rurick-details columns is-multiline is-centered'>
+    <div className='is-rurick-details columns is-multiline is-centered is-paddingless'>
       {/* Name */}
       <div className='column is-11 is-size-3 has-text-centered'>
         {
