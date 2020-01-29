@@ -17,6 +17,13 @@
   overflow-y: scroll;
 }
 
+.is-full-height {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .has-not-scrollbar {
   scrollbar-width: none;
   &::-webkit-scrollbar {

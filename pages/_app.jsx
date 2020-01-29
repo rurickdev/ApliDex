@@ -34,8 +34,8 @@ function MyApp (props) {
           </div>
         </aside>
 
-        <div className='column is-three-quarters has-background-white-ter'>
-          <div className='columns is-multiline is-mobile is-marginless is-paddingless'>
+        <div className='column is-three-quarters has-background-white-ter is-marginless is-paddingless'>
+          <div className='columns is-multiline is-mobile is-marginless is-paddingless is-full-height'>
             {/* ToDo: Crear el componente buscador */}
             {/* <div className='column is-full'>
               <div className='search-bar'>
