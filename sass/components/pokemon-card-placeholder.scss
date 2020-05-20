@@ -1,17 +1,19 @@
-
 .pokemon-card-placeholder {
-  min-height: 30vh;
+  min-height: 25vh;
   padding: 5px;
-  margin: 0;
+  margin-bottom: 0;
 }
 .ph-item {
-  border-color: white;
+  border-color: var(--place-holder-border-color);
+  background-color: var(--place-holder-item-background);
 }
 .ph-picture {
   border-radius: 12px 12px 0 0;
+  // background-color: var(--place-holder-background);
 }
 .ph-circular {
   border-radius: 50%;
   width: 33px !important;
   height: 33px !important;
+  background-color: var(--place-holder-background);
 }

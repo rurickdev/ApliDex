@@ -5,9 +5,9 @@
   position: fixed;
   bottom: 0;
   z-index: 2;
-  background-color: white;
+  background-color: var(--pokemon-bottom-sheet-background);
   border-radius: 12px 12px 0 0;
-  box-shadow: 0px -5px 10px 0px rgba(0,0,0,0.25);
+  box-shadow: var(--pokemon-bottom-sheet-box-shadow);
   width: 100%;
   .is-pokemon-data-bottom-sheet {
     width: 100%;
@@ -17,7 +17,7 @@
     overflow-y: auto;
     white-space: nowrap;
     text-transform: capitalize;
-  } 
+  }
   .is-pokemon-details-bottom-sheet {
     position: relative;
     height: 85vh;

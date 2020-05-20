@@ -50,11 +50,15 @@ function RurickBottomSheet (props) {
                     key={index}
                   >
                     <a
-                      className={`mdi mdi-${profile.icon} is-size-4`}
-                      title={profile.name} href={profile.link}
+                      href={profile.link}
                       target='_blank'
                       rel='noopener noreferrer'
-                    />
+                    >
+                      <span
+                        className={`mdi mdi-${profile.icon} is-size-4`}
+                        title={profile.name}
+                      />
+                    </a>
                   </div>
                 ))}
               </div>

@@ -1,7 +1,7 @@
 
 function PokemonCardPlaceholder () {
   return (
-    <div className='ph-item pokemon-card-placeholder'>
+    <div className='pokemon-card-placeholder ph-item'>
       <div className='ph-col-12'>
         <div className='ph-picture' />
         <div className='ph-row'>
