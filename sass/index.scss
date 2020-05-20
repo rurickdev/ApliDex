@@ -1,13 +1,14 @@
+@import "./theme.scss";
 
 // Google Fonts
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Press+Start+2P&display=swap");
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .has-bit-font {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 .is-details-container {
@@ -39,9 +40,9 @@
 }
 
 // Bulma
-@import './constants.scss';
-@import '../node_modules/bulma/bulma.sass';
-@import '../node_modules/placeholder-loading/src/scss/placeholder-loading.scss';
+@import "./constants.scss";
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/placeholder-loading/src/scss/placeholder-loading.scss";
 
 a {
   &:hover {
@@ -55,5 +56,4 @@ a {
   }
 }
 
-@import './components/index.scss';
-
+@import "./components/index.scss";

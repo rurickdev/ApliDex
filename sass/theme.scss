@@ -1,0 +1,47 @@
+:root {
+  --body-background: #e0e0e0;
+  --details-background: black;
+  --link-color: white;
+  --link-hover-color: red;
+  --link-visited-color: red;
+  --place-holder-border-color: white;
+  --place-holder-item-background: white;
+  --place-holder-picture-background: white;
+  --pokemon-card-background: white;
+  --pokemon-card-box-shadow: 0px 15px 25px 0px rgba(202, 202, 202, 1);
+  --pokemon-bottom-sheet-background: white;
+  --pokemon-bottom-sheet-box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.25);
+  --text-color: #4a4a4a;
+  --user-details-border: black;
+  --user-bottom-sheet-background: white;
+  --user-bottom-sheet-box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-background: black;
+    --details-background: black;
+    --link-color: white;
+    --link-hover-color: red;
+    --link-visited-color: red;
+    --place-holder-border-color: black;
+    --place-holder-background: black;
+    --place-holder-item-background: black;
+    --pokemon-card-background: #080808;
+    --pokemon-card-box-shadow: 0px 15px 25px 0px rgb(54, 54, 54);
+    --pokemon-bottom-sheet-background: black;
+    --pokemon-bottom-sheet-box-shadow: 0px -5px 10px 0px rgba(255, 255, 255, 0.25);
+    --text-color: white;
+    --user-details-border: black;
+    --user-bottom-sheet-background: black;
+    --user-bottom-sheet-box-shadow: 0px -5px 10px 0px rgba(255, 255, 255, 0.25);
+  }
+}
+
+* {
+  color: var(--text-color);
+}
+
+.is-details-container {
+  background-color: var(--pokemon-card-background);
+}
