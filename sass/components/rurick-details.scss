@@ -17,34 +17,34 @@
       text-justify: inter-character;
     }
   }
-  .is-battle-background {    
+  .is-battle-background {
     border-style: double;
     border-width: thick;
     border-radius: 12px;
     padding: 12px;
     position: relative;
-    border-color: #000000;
+    border-color: var(--user-detail-border);
     .corner {
       position: absolute;
       background-size: contain;
-      background-image: url('#{$cdnUrl}/assets/pokeball_corner.png');
+      background-image: url("#{$cdnUrl}/assets/pokeball_corner.png");
       width: 28px;
       height: 28px;
       &.top-left {
         top: -15px;
-        left: -15px
+        left: -15px;
       }
       &.top-right {
         top: -15px;
-        right: -15px
+        right: -15px;
       }
       &.bottom-left {
         bottom: -15px;
-        left: -15px
+        left: -15px;
       }
       &.bottom-right {
         bottom: -15px;
-        right: -15px
+        right: -15px;
       }
     }
   }
